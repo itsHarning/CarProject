@@ -16,4 +16,33 @@ public class CarRepository {
     public ArrayList<Car> getAllCars() {
         return init.carList;
     }
+
+    public Car getCarById (int id) {
+        for (Car car : init.carList) {
+            if (car.getId() == id) {
+                return car;
+            }
+        }
+        return null;
+    }
+
+    public void deleteCarById (int id) {
+        Car car = getCarById(id);
+        init.carList.remove(car);
+    }
+
+    public void save (Car car) {
+        ArrayList<Car> carList = init.carList;
+        int newId;
+
+        if (carList.isEmpty()) {
+            newId = 1;
+        } else {
+            newId = carList.getLast().getId() + 1;
+        }
+
+        car.setId(newId);
+
+        carList.add(car);
+    }
 }

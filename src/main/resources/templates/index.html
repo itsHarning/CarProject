@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MainPage</title>
-    <link rel="stylesheet" href="../static/style.css" th:href="@{style.css}">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{style.css}">
 </head>
 <body>
 <div class="container">
@@ -34,5 +34,19 @@
             <span th:text="${Car.licensePlate}">LicensePlate</span>
         </div>
         <img th:src="@{'/images/' + ${Car.image}}" alt="Car Image">
+    </div>
+</div>
+<div class="buttons">
+    <div class="modify-forms">
+        <a th:href="@{/getCreateCar}" class="btn">Create new car</a>
+        <form th:action="@{/showCar}" method="get" class="modify-form">
+            <input type="number" name="id" placeholder="Enter Car ID" required>
+            <button type="submit" class="btn">Read</button>
+        </form>
+
+        <form th:action="@{/deleteCar}" method="post" class="modify-form">
+            <input type="number" name="id" placeholder="Enter ID of car to delete" required>
+            <button type="submit" class="btn">Delete</button>
+        </form>
     </div>
 </div>

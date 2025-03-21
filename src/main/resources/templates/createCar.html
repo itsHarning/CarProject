@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{style.css}">
+</head>
+<body>
+<div class="container">
+    <div class="form-container">
+        <h2>Create New Car</h2>
+        <form th:action="@{/saveCreateCar}" method="post">
+            <label for="brand">Brand</label>
+            <input type="text" id="brand" name="brand" placeholder="Enter car brand" required>
+
+            <label for="modelYear">Model Year</label>
+            <input type="number" id="modelYear" name="modelYear" placeholder="Enter car model year" required>
+
+            <label for="type">Type</label>
+            <input type="text" id="type" name="type" placeholder="Enter car type" required>
+
+            <label for="colour">Colour</label>
+            <input type="text" id="colour" name="colour" placeholder="Enter car colour" required>
+
+            <label for="licensePlate">License Plate</label>
+            <input type="text" id="licensePlate" name="licensePlate" placeholder="Enter licensePlate" required>
+
+            <button type="submit">Create Car</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
