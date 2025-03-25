@@ -19,7 +19,7 @@ CREATE TABLE cars (
 -- Dummy data, Det er de samme objekter som bruges i InitData.
 INSERT INTO cars (brand, modelYear, type, colour, licensePlate, img)VALUES
                                                                          ('Honda', 1999, 'Kei Truck', 'White', 'ABC123', 'Honda Acty Kei Truck White - 1999.png'),
-                                                                         ('Porche', 1993, 'Baja', 'White', 'DEF456', 'Baja Porche 911 by TJ Russell.webp'),
+                                                                         ('Porche', 1993, 'Baja', 'White', 'DEF456', 'Baja Porsche 911 by TJ Russell.webp'),
                                                                          ('Scania', 2021, 'Bus', 'Yellow', 'GHI789', 'Scania Bus.jpg'),
                                                                          ('Lightning McQueen', 2006, 'Sentient', 'Red', 'JKL012', 'Power Wheels Lightning McQueen.jpg'),
                                                                          ('Hyundai', 2074, 'Concept', 'Silver', 'MNO345', 'Hyundai N Vision 1974.jpg');

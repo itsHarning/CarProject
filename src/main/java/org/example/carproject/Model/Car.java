@@ -29,6 +29,8 @@ public class Car {
         this.image = image;
     }
 
+    public Car() {}
+
     public int getId() {
         return id;
     }

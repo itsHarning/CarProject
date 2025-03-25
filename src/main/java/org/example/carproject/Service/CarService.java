@@ -10,7 +10,7 @@ public class CarService {
         if (brand.contains("Honda")) {
             image = "Honda Acty Kei Truck White - 1999.png";
         } else if (brand.contains("Porche")) {
-            image = "Baja Porche 911 by TJ Russell.webp";
+            image = "Baja Porsche 911 by TJ Russell.webp";
         } else {
             image = "generic car image.jpg";
         }
