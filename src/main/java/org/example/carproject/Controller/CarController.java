@@ -33,7 +33,7 @@ public class CarController {
                                  @RequestParam("type") String type,
                                  @RequestParam("colour") String colour,
                                  @RequestParam("licensePlate") String licensePlate) {
-        String image = carService.getImage(brand, colour);
+        String image = carService.getImage(brand, type);
         Car car = new Car(id, brand, modelYear, type, colour, licensePlate, image);
         carRepository.update(car);
         return "redirect:/";
@@ -65,7 +65,7 @@ public class CarController {
                           @RequestParam("type") String type,
                           @RequestParam("colour") String colour,
                           @RequestParam("licensePlate") String licensePlate){
-        String image = carService.getImage(brand, colour);
+        String image = carService.getImage(brand, type);
         Car car = new Car(brand, modelYear, type, colour, licensePlate, image);
         carRepository.save(car);
         return "redirect:/";
