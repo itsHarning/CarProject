@@ -15,8 +15,8 @@ import java.util.ArrayList;
 @Repository
 public class CarRepository {
 
-    @Autowired
-    InitializedData initializedData;
+//    @Autowired
+//    InitializedData initializedData;
 
     @Autowired
     DataSource dataSource;
