@@ -48,5 +48,10 @@
             <input type="number" name="id" placeholder="Enter ID of car to delete" required>
             <button type="submit" class="btn">Delete</button>
         </form>
+
+        <form th:action="@{getUpdateCar}" method="get" class="modify-form">
+            <input type="number" name="id" placeholder="Enter Car ID to Update" required>
+            <button type="submit" class="btn">Update</button>
+        </form>
     </div>
 </div>

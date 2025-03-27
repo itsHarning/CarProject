@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{style.css}">
+</head>
+<body>
+<div class="container">
+    <div class="form-container">
+        <h2>Update Car</h2>
+        <form th:action="@{/saveUpdateCar}" method="post">
+            <input type="hidden" name="id" th:value="${car.id}" />
+
+            <label for="brand">Brand:</label>
+            <input type="text" id="brand" name="brand" placeholder="Enter car brand" th:value="${car.brand}" required>
+
+            <label for="modelYear">Model year:</label>
+            <input type="number" id="modelYear" name="modelYear" placeholder="Enter model year" th:value="${car.modelyear}" required>
+
+            <label for="type">Type:</label>
+            <input type="text" id="type" name="type" placeholder="Enter car type" th:value="${car.type}" required>
+
+            <label for="colour">Color:</label>
+            <input type="text" id="colour" name="colour" placeholder="Enter car color" th:value="${car.colour}" required>
+
+            <label for="licensePlate">License plate:</label>
+            <input type="text" id="licensePlate" name="licensePlate" placeholder="Enter license plate" th:value="${car.licenseplate}" required>
+
+            <button type="submit">Update Car</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

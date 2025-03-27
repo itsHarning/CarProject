@@ -19,6 +19,26 @@ public class CarController {
     @Autowired
     CarService carService;
 
+    @GetMapping("/getUpdateCar")
+    public String updateCar(@RequestParam("id") int id, Model model) {
+        Car car = carRepository.getCarById(id);
+        model.addAttribute(car);
+        return "updateCar";
+    }
+
+    @PostMapping("/saveUpdateCar")
+    public String postUpdateCar (@RequestParam("id") int id,
+                                 @RequestParam("brand") String brand,
+                                 @RequestParam("modelYear") int modelYear,
+                                 @RequestParam("type") String type,
+                                 @RequestParam("colour") String colour,
+                                 @RequestParam("licensePlate") String licensePlate) {
+        String image = carService.getImage(brand, colour);
+        Car car = new Car(id, brand, modelYear, type, colour, licensePlate, image);
+        carRepository.update(car);
+        return "redirect:/";
+    }
+
     @GetMapping("/showCar")
     public String showCar (@RequestParam("id") int id, Model model) {
         Car singleCar = carRepository.getCarById(id);

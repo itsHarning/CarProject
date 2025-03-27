@@ -17,9 +17,9 @@ public class PageController {
 
     @GetMapping("/")
     public String mainPage (Model model) {
-        ArrayList<Car> carList = new ArrayList<>();
-
-        carList.addAll(carRepository.getAllCars());
+        ArrayList<Car> carList;
+        carList = carRepository.getAllCars();
+        model.addAttribute("carList", carList);
 
         model.addAttribute("carList", carList);
 
