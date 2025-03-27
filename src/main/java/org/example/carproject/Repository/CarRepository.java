@@ -34,6 +34,7 @@ public class CarRepository {
                 car.setId(resultSet.getInt("id"));
                 car.setBrand(resultSet.getString("brand"));
                 car.setModelYear(resultSet.getInt("modelYear"));
+                car.setType(resultSet.getString("type"));
                 car.setColour(resultSet.getString("colour"));
                 car.setLicensePlate(resultSet.getString("licensePlate"));
                 car.setImage(resultSet.getString("img"));
@@ -61,6 +62,7 @@ public class CarRepository {
                     car.setId(resultSet.getInt("id"));
                     car.setBrand(resultSet.getString("brand"));
                     car.setModelYear(resultSet.getInt("modelYear"));
+                    car.setType(resultSet.getString("type"));
                     car.setColour(resultSet.getString("colour"));
                     car.setLicensePlate(resultSet.getString("licensePlate"));
                     car.setImage(resultSet.getString("img"));
