@@ -30,14 +30,13 @@ public class CarRepository {
              ResultSet resultSet = statement.executeQuery())  {
 
             while (resultSet.next()) {
-                Car car = new Car();
-                car.setId(resultSet.getInt("id"));
-                car.setBrand(resultSet.getString("brand"));
-                car.setModelYear(resultSet.getInt("modelYear"));
-                car.setType(resultSet.getString("type"));
-                car.setColour(resultSet.getString("colour"));
-                car.setLicensePlate(resultSet.getString("licensePlate"));
-                car.setImage(resultSet.getString("img"));
+                Car car = new Car(resultSet.getInt("id"),
+                        resultSet.getString("brand"),
+                        resultSet.getInt("modelYear"),
+                        resultSet.getString("type"),
+                        resultSet.getString("colour"),
+                        resultSet.getString("licensePlate"),
+                        resultSet.getString("img"));
                 carList.add(car);
             }
 
